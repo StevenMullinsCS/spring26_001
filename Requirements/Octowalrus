@@ -1,0 +1,14 @@
+Requirements:
+1.	The game MUST have a single blue cycle and three enemy yellow cycles
+2.  The player MUST be able to only turn left and right
+3.  The player cycle MUST have a line behind it that can destroy enemy cycles
+4.  The player MUST lose if they touch a yellow cycle line
+5.	The game MUST run at a slowly increasing speed, starting from very slow
+6.	The game MUST include a countdown clock starting from 3 minutes
+7.	The game MUST have a score that increases with each enemy takedown
+8.	The game MUST be cross compatible with Windows/Linux/MacOS
+9.	The game MAY be cross compatible with x86/Arm
+10.	The game MUST have a black background
+11.	The game MUST be simple and user-friendly
+12.	The game MAY have multiplayer capabilities
+13.	The game MUST be tested and approved by game testers
