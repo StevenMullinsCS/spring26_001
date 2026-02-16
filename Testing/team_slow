@@ -1,0 +1,36 @@
+<pre> - <action> - <post> ( this is only section 1 of the requirements )
+Connor Fulks
+Brady Loos
+Luke Campbell
+
+user launches game + standard game config 			          - ship is created 						          - only one ship is on screen
+user launches game + 100% ship creation is set in config 	- 10 ships are created 						      - only 10 ships are on screen
+user launches game + -10% ship creation is set in config 	- exception is thrown 						      - game displays error for config being incorrect
+config error is displayed 					                      - config is repaired to standard 				- game launches with no config error
+
+game is running + user clicks any other input 			- non registered input 						- no missiles are shown or created
+
+user clicks spacebar 						- missile generated 						- missile shown on screen
+user clicks right click 				- missile generated 						- missile shown on screen
+user click any other input			- invalid input							    - no missile is shown on screen
+
+user launched missile (spacebar) 				          - missile is launched 						- missile launches from bottom center of screen
+user launched missile (spacebar + any input) 			- missile is launched 						- missile launches from bottom center of screen
+user launched missile (right click) 				      - missile is launched 						- missile launches and keeps persistent movement
+user launched missile (right click + any input) 	- missile is launched 						- missile launches and keeps persistent movement
+
+
+5 missiles on screen 						- user spawns another missile (spacebar)			            - the new missile does not get created
+5 missiles on screen 						- user spawns another missile (spacebar + any input)		  - the new missile does not get created
+5 missiles on screen 						- user spawns another missile (right click) 			        - the new missile does not get created
+5 missiles on screen 						- user spawns another missile (right click + any input) 	- the new missile does not get created
+5 missiles on screen 						- user spawns another missile (spacebar + right click)		- the new missile does not get created
+
+missile is launched 						- missile goes off screen 					- missile gets removed
+
+(cascading tests)
+missile and ship are on screen 					      - missile and ship intersect (same coords) 			- hit detected
+hit detected 							                    - ship and missile are removed 					        - ship and missile are not on screen
+missile and ship are removed due to hit 			- trigger explosion animation 					        - explosion animation is on screen
+missile and ship intersect 					          - hit detected 							                    - hit count incremented
+
