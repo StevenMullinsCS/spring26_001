@@ -1,0 +1,86 @@
+internal class Program
+    {
+        static int step = 0;
+
+        // Method: follows the pseudocode main flow:
+        // it prints instructions, collects two integers, adds them,
+        // and sends the sum into the recursive function.
+        static void Main(string[] args)
+        {
+            // intro text with instructions
+            Console.WriteLine("This program takes two integers, adds them, and recursively reduces the result.");
+
+            int I1 = GetIntInput("Enter first integer: ");
+
+            int I2 = GetIntInput("Enter second integer: ");
+
+            int X = I1 + I2;
+
+            // overflow check 
+            if (Overflow(I1, I2, X))
+            {
+                Console.WriteLine("Error: Adding these values causes integer overflow.");
+                Console.WriteLine("Please enter smaller values.");
+                return;
+            }
+
+            if (X >= -9 && X <= 9)
+            {
+                Console.WriteLine($"Final result: {X}");
+                return;
+            }
+
+            int result = Recursive(X);
+
+            Console.WriteLine($"Final result: {result}");
+        }
+
+        // Method: implements the pseudocode recursive function:
+        // if X is a single digit, return it;
+        // otherwise isolate the LSD, remove it, add it back,
+        // and recurse on the new value.
+        static int Recursive(int X)
+        {
+            if (X >= -9 && X <= 9)
+            {
+                Console.WriteLine($"Step {++step}: {X}");
+                return X;
+            }
+
+            // isolate least significant digit
+            int LSD = Math.Abs(X % 10);
+
+            int remaining = X / 10;
+
+            // Add LSD to X to save LSD fully tracked
+            int newX = remaining + LSD;
+
+            Console.WriteLine($"Step {++step}: {X}");
+
+            return Recursive(newX);
+        }
+
+        // Method: checks whether adding two integers
+        // produced a sum that is in the int range.
+        static bool Overflow(int x, int y, int sum)
+        {
+            return ((x > 0 && y > 0 && sum < 0) ||
+                    (x < 0 && y < 0 && sum > 0));
+        }
+
+        // Method: repeatedly prompts the user until
+        // a valid integer is entered, then returns that value.
+        static int GetIntInput(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string input = Console.ReadLine();
+
+                if (int.TryParse(input, out int value))
+                    return value;
+
+                Console.WriteLine("Invalid input. Please enter an integer or a smaller value.");
+            }
+        }
+    }
