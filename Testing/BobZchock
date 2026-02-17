@@ -1,0 +1,26 @@
+Names: CJ Parham and Ethan Turner
+
+
+1.	Precondition: Less than 5 active missiles on the screen
+Action: User right-clicks or presses spacebar
+Postcondition: Missile launch gets initiated
+
+
+2.	Precondition: No active ships
+Action: System initiates a ship launch
+Postcondition: New active ships appear on the screen
+
+
+3.	Precondition: Active ship going across the screen
+Action: Ship goes off the screen
+Postcondition: System removes the ship from being active
+
+
+4.	Precondition: Game is actively running
+Action: “Hit” count reaches 10, OR user clicks left mouse button, OR user clicks the escape button, OR the user has not initiated a missile launch in the last 5 minutes
+Postcondition: Game ends
+
+
+5.	Precondition: Active ships and missiles launched
+Action: Ship gets hit by missile
+Postcondition: An “explosion” is shown at the point of impact, the missile and ship are removed, and the “hit” count updates
