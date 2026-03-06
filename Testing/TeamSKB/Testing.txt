@@ -1,0 +1,133 @@
+Brandon Bartley
+Kaden Triebel
+Samuel Deaton
+
+1a. The solution must initiate a missile launch when user clicks the right mouse button
+Pre: Game is running 
+Action: Click Right Mouse Button
+Post: Missile appears on screen
+
+1b. The solution must initiate a missile launch when user clicks the space bar
+Pre: Game is running 
+Action: Press space bar
+Post: Missile appears on screen
+
+1c. The solution must limit the number of active missiles on the screen to no more than five at any given time. (Active missiles are displayed on screen
+Pre: Game is running with 5 active missiles
+Action: Press right-click or space bar to attempt to launch a sixth missile
+Post: Game is running with 5 active missiles
+
+1d. The solution must remove the missile from being active if it goes off screen
+Pre: Game is running with an active missile going towards the edge of the screen
+Action: Wait until missile goes off screen and keep watch of the missile counter.
+Post: The missile is no longer active.
+
+1e. The solution must maintain the same constant speed for all missiles
+Pre: Game is running with no active missiles
+Action: Rapidly click right mouse or space bar 5 times, all in the same direction. Observe if missiles run into one another.
+Post: No missiles hit each other
+
+1f. The solution must launch missiles from the center of the screen when a launch is initiated
+Pre: Game is running and no active missiles
+Action: Press space bar or right-click
+Post: Missile comes from the center of the bottom of the screen
+
+1g. The solution must maintain the same constant direction for all missiles to be vertically straight up from the launched position
+Pre: Game in running with no active missiles
+Action: Launch a missile. Observe direction
+Post: Missile came straight up from the bottom
+
+1h. The solution must detect when a missile “hits” a ship
+Precondition: There is a live ship
+Action: The position of a missile overlaps with the position of a ship
+Postcondition: The program accounts for the collision
+ 
+1i. The solution must display an explosion at the point where a missile “hits” a ship
+Precondition: There is a live ship
+Action: a missile “hits” a ship
+Postcondition: The solution displays an explosion
+ 
+1j. The solution must remove the missile and ship after the missile “hits” the ship
+Precondition: There is a live ship
+Action: a missile “hits” a ship
+Postcondition: The missile and ship are removed
+ 
+1k. The solution must keep a count of all “hits”
+Precondition: The counter is equal to the number of ships “hit”
+Action: A ship is “hit”
+Postcondition: The counter is incremented by 1
+
+2a. The solution must initiate a ship launch when the system detects there are no active ships
+Pre: Game is running with no active ships
+Action: Detecting no active ships
+Post: Initiate a ship launch
+ 
+2b. The solution must support multiple types of ships based on a configurable value.
+Pre: Program has a configurable value
+Action: Supports multiple types of ships
+Post: Multiple types of ships are available to use
+ 
+2c. The solution must display the appropriate image based on the type of ship when the ship is active
+Pre: Game is running
+Action: Ships are active that have a type
+Post: Image(s) are displayed
+ 
+2d. The solution must randomly initiate a ship launch based on a configurable rate where the default is 30% of the time
+Pre: Game is running
+Action: Have a configurable rate that defaults to 30% of the time
+Post: Randomly initiate a ship launch
+ 
+2di. The solution must randomly choose from available ship types when a launch is initiated, giving all types equal chance of being launched
+Pre: Game is running
+Action: Launch is initiated, and have available ship types
+Post: Deploy ships from available ship types
+ 
+2dii. The solution must limit the number of active ships on the screen to no more than ten (10) at any given time. (an “active ship” is any ship currently being displayed on the screen)
+Pre: Game is running with active ships
+Action: 10 or less active ships on screen
+Post: Make sure that they stay 10 or less
+
+2diii. The solution must randomly choose a location to launch a ship from when initiated
+Precondition. The solution is firing a ship
+Action. The solution randomly selects a location to launch a ship
+Postcondition. The solution knows where to launch the ship
+ 
+2diii1. The system must randomly choose to launch the ship from the left side of the screen or the right side of the screen
+Precondition: The solution is firing a ship
+Action: The solution randomly chooses from the available ship types
+Postcondition: The solution knows which ship to launch
+ 
+2diii2. The system must limit the number of active ships on the screen to no more than ten (10) at any given time. (an “active ship” is any ship currently being displayed on the screen)
+Precondition: The solution is firing a ship
+Action: The solution checks if there are 10 or more ships
+Postcondition: The solution will not fire the ship if there are 10 or more ships
+ 
+2diii3. The system must assign the speed of the ship based on the type of the ship being initiated
+Precondition: The solution is firing a ship
+Action: The solution randomly chooses the speed of the ship
+Postcondition: The solution knows how fast the ship will launch
+ 
+2diii4. The system must assign the direction of the ship based on which side of the screen it is being launched from (if from the left, direction goes left to right; if from the right, direction goes left to right; if from the right, direction goes right to left)
+Precondition: The solution is firing a ship
+Action: The solution decides to fire right if the ship is on the left, the solution decides to fire left if the ship is on the right
+Postcondition: The solution knows which direction to fire the ship
+
+3. The solution must end the game when the “hit” count has reached ten
+Pre: Game is running and player has 9 hits.
+Action: Fire a missile at the last ship
+Post: Counter reaches 10, game has ended
+
+4. The solution must end the game when the user clicks the left mouse button
+Pre: Game is running
+Action: Press left mouse button
+Post: Game has ended
+
+5. The solution must end the game when the user clicks the esc button
+Pre: Game is running
+Action: Press esc
+Post: Game has ended
+
+6. The solution must end the game if the user has not initiated a missile launch in the last 5 minutes
+Pre: Game is running
+Action: Do nothing for 5 minutes
+Post: Game has ended

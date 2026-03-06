@@ -1,0 +1,75 @@
+Grayson Manis, Greyson Dobis, and Camden Brunsma.
+
+Example of requirements for my battleship program…
+Solution: a game where the player shoots a missile at ships passing across the screen .
+1)	The solution must support missiles launched by the user
+a)	The solution must initiate a missile launch when the user clicks the right mouse button.
+-	Test Case: 
+o	Precondition: Right click input is registered.
+o	Action: Player clicks right click.
+o	Postcondition: A missile is launched from the center of the screen.
+
+b)	The solution must initiate a missile launch when the user clicks the space bar.
+-	Test Case: 
+o	Precondition: Space bar input is registered.
+o	Action: Player clicks space bar.
+o	Postcondition: A missile is launched from the center of the screen.
+
+c)	The solution must limit the number of active missiles on the screen to no more than ﬁve (5) at any given time. (an “active missile” is any missile currently being displayed on the screen)
+	- Test Case: 
+o	Precondition: 5 missiles are on screen.
+o	Action: Check current active missile count.
+o	Postcondition: If missile count is more than 5 then don’t let the user shoot.
+
+d)	The solution must remove the missile from being active if it goes off the screen.
+	- Test Case: 
+o	Precondition: Missile is moving.
+o	Action: Missile goes off the screen.
+o	Postcondition: Removes missile if missile is off screen. 
+
+e)	The solution must maintain the same constant speed for all missiles
+	- Test Case: 
+o	Precondition: Missile is launched and moving.
+o	Action: Missile changes speed.
+o	Postcondition: Remove the missile.
+
+f)	The solution must launch missiles from the center of the bottom of the screen when a launch is initiated
+- Test Case: 
+o	Precondition: User is on main screen.
+o	Action: Missile is launched.
+o	Postcondition: Missiles on screen launch from the center of the bottom of the screen.
+g)	The solution must maintain the same constant direction for all missiles to be vertically straight up from the launched position.
+- Test Case: 
+o	Precondition: Missile is on screen.
+o	Action: Missile is launched.
+o	Postcondition: Missile is shot vertically straight up from the launched position.   
+h)	The solution must detect when a missile “hits” a ship
+-	Test Case: 
+o	Precondition: Missiles and ships on screen.
+o	Action: Missile hits a ship.
+o	Postcondition: Notify that a ship is hit.
+
+i)	The solution must display an explosion at the point where a missile “hits” a ship
+-	Test Case: 
+o	Precondition: Missile moves toward a ship.
+o	Action: Missile hits ship.
+o	Postcondition: Explosion is displayed at the point where a missile hits a ship.
+
+j)	The solution must remove the missile and ship after the missile “hits” the ship
+-	Test Case: 
+o	Precondition: Missile is moving toward ship.
+o	Action: Missile hits ship. 
+o	Postcondition: Missile and ship are removed.
+
+k)	The solution must keep a count of all “hits”
+-	Test Case: 
+o	Precondition: Missile is launched.
+o	Action: Missile hits a ship.
+o	Postcondition: System keeps a count of all the hits.
+
+2)	The solution must support ships launched by the solution
+a)	The solution must initiate a ship launch when the system detects there are no active ships.
+-	Test Case: 
+o	Precondition: Main screen displays no active ships.
+o	Action: System launches ship.
+o	Postcondition: System detects there are no active ships and initiates a ship launch.
